@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/fontawesome.css" rel="stylesheet">
+    <!-- <link href="css/all.css" rel="stylesheet"> -->
+    <link href="css/brands.css" rel="stylesheet">
+    <link href="css/solid.css" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body onload="window.ReadCookie()">
+
+  <!-- Navbar starts -->
+    <div class="container p-0">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="d-flex justify-content-around mobile-nav-top"> 
+          <div class="row justify-content-center align-items-center mobile-nav-top-logo" >
+            <img src="images/logo.svg" alt="Shortly logo">
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="container-fluid p-0">
+
+              <div class="collapse navbar-collapse" id="navbar">
+                <div class="row col-1 justify-content-center align-items-center shortly-logo" >
+                  <img src="images/logo.svg" alt="Shortly logo">
+                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Resources</a>
+                  </li>
+                </ul>
+                <hr/>
+                <div class="row">
+                  <div class="input-group input-group-md">
+                    <button class="btn login-button"  type="button">Login</button>  
+                    <button class="btn signup-button"  type="button">Sign Up</button>  
+
+                  </div>
+  
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </nav>
+      </div>
+  <!-- Navbar ends -->
+
+
+
+      <!-- Section #1 starts -->
+      <div class="row col-12 m-0">
+        <section class="hero-primary order-2 order-md-1 d-flex flex-column col-12 col-md-7 justify-content-center align-items-center
+        p-0">
+            <div class="col-8 offset-md-0 d-flex flex-xs-column flex-md-column flex-wrap justify-content-center justify-content-md-start align-content-md-start">
+                <div class="col-11 col-sm-8 col-md-10 ml-0 d-flex flex-sm-column  flex-wrap  justify-content-sm-center align-items-center  order-2 justify-content-center">
+                    <span class="primary-hero-heading">More than just shorter links</span>
+                    <span class="d-flex justify-content-center text-align-center align-content-center primary-hero-sub-title">Build your brand's recognition and get detailed insights on how your links are performing.
+                    </span>
+                    <div class="input-group input-group-lg get-started-first-div">
+                      <button class="btn mt-2 get-started-button-first"  type="button">Get Started</button>  
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <div class="col-11 col-sm-8 col-md-3 order-1 order-md-2"> <img src="images/illustration-working.svg"></div>
+      </div>
+<!-- Section #1 ends -->
+
+
+        <!-- Section #2 starts -->
+          <section class="section-two d-flex flex-wrap">
+           
+            <div class="container d-flex justify-content-center col-10 col-sm-12 url-shortener-outer-container flex-wrap">
+              <div class="url-shortener-inner-container col-12">
+              <div class="input-group input-group-lg">
+                  <input type="url" class="form-control source-url col-11 col-md-10" placeholder="Shorten a link here..." aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" required>
+                  <button id="copy_button" class="btn btn-sm copy-button col-2 d-none">Copy</button>
+                  <button class="btn col-5 col-sm-2" id="shorten-url"  type="submit">Shorten It!</button>
+              </div>
+          </div>
+          </div>
+        
+
+
+            <div class="d-flex container justify-content-center statistics-container flex-wrap p-0">
+             
+              <!-- <div class="container d-flex justify-content-center col-12 url-shortener-outer-container flex-wrap"> -->
+                <!-- <div class="col-12 shortened-url-output">
+                  <div class="row input-group input-group-md  justify-content-center">
+                    <span class="col-5 align-self-center original-url"></span>
+                    <span class="col-5 align-self-center shortened-url"></span>
+
+                     
+                      <button id="copy_button" class="btn btn-sm copy-button col-4 col-md-1">Copy</button>
+                  </div>
+
+              </div> -->
+      <!-- </div>          -->
+              
+              
+              <div class="d-flex flex-column col-sm-8 col-lg-6 text-center statistics-text-col">
+                    <span class="section-two-heading-text">Advanced statistics </span>
+                    <span class="section-two-sub-title">Track how your links are performing across the web with our advances statictics dashboard.</span>
+                </div>
+            </div>
+
+            <div class="container d-flex justify-content-center">              
+                <div class="card-group">
+                    <div class="card col-3 statistics-card">
+                        <span class="icon-circle">
+                            <img src="images/icon-brand-recognition.svg" alt="Brand recognition">
+                            </span>
+                      <div class="card-body">
+                        <h5 class="card-title">Brand Recognition</h5>
+                        <p class="card-text">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
+                      </div>
+                    </div>
+                    <span class="horizontal-card-divider"></span>
+                    <div class="card col-3  statistics-card">
+                        <span class="icon-circle">
+                            <img src="images/icon-detailed-records.svg" alt="Detailed records">
+                            </span>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                            Detailed Records</h5>
+                        <p class="card-text">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+                      </div>
+                    </div>
+                    <span class="horizontal-card-divider"></span>
+                    <div class="card col-3 statistics-card">
+                        <span class="icon-circle">
+                            <img src="images/icon-fully-customizable.svg" alt="Fully customizable">
+                            </span>
+                      <div class="card-body">
+                        <h5 class="card-title">Fully Customizable</h5>
+                        <p class="card-text">Improve brand awareness and content discoverability through customizable links, supercharging audience engagemnent.</p>
+                      </div>
+                    </div>
+
+                  </div>
+            </div>
+        </section>
+        <!-- Section #2 ends -->
+
+
+<!-- Boost links div starts -->
+        <div class="row get-started-bottom-row">             
+          <div class="d-flex flex-wrap align-items-center justify-content-center text-white">
+              <span class="col-12 text-center d-block boost-text">Boost your links today</span>
+                <div class="row col-12 col-md-2 ml-auto align-self-center">
+                    <div class="input-group input-group-lg justify-content-center">
+                   <button class="btn get-started-button-second"  type="button">Get Started</button>
+                  </div>
+                  </div>
+          </div>
+      </div>
+<!-- Boost links div ends -->
+
+
+<!-- Footer div starts -->
+<div class="row footer-row m-0">
+  <div class="container d-flex justify-content-center p-0 col-12">      
+  <div class="row align-items-center justify-content-center text-white col-12 col-md-10 flex-column flex-md-row">
+      <div class="row col-4 col-md-2 justify-content-center">
+        <img src="images/logo.svg" alt="Shortly logo">
+      </div>
+      <div class="col-6 col-md-7  col-lg-7 d-flex flex-wrap align-items-center  justify-content-center justify-content-lg-end align-items-md-start footer-links-col ">
+        <!-- div.row span.heeading.d-flex.flex-wrap.col-3 a.links -->
+        <div class="row col-12 col-md-3 p-0">
+          <span class="heading d-flex flex-wrap">
+            Features
+          </span>
+          <a href="#" class="link">Link shortening</a>
+          <a href="#" class="link">Branded links</a>
+          <a href="#" class="link">Analytics</a>
+        </div>
+       
+        <div class="row col-12 col-md-3 p-0">
+          <span class="heading d-flex flex-wrap">
+            Resources
+          </span>
+          <a href="#" class="link">Blog</a>
+          <a href="#" class="link">Developers</a>
+          <a href="#" class="link">Support</a>
+        </div>
+
+        <div class="row col-12 col-md-3 p-0">
+          <span class="heading d-flex flex-wrap">
+            Company
+          </span>
+          <a href="#" class="link">About </a>
+          <a href="#" class="link">Our Team</a>
+          <a href="#" class="link">Careers</a>
+          <a href="#" class="link">Contact</a>
+        </div>
+        
+      </div>       
+      
+      <div class="col text-center d-block p-0">
+        <div class="row justify-content-center align-items-center footer-social-media-icons d-inline">
+          <a href="#"  class="col-2"><img src="./images/icon-facebook.svg"> </a>
+          <a href="#"  class="col-2"><img src="./images/icon-twitter.svg"></a>
+          <a href="#"  class="col-2"><img src="./images/icon-pinterest.svg"></a>
+          <a href="#"  class="col-2"><img src="./images/icon-instagram.svg"></a>
+        </div>
+
+      </div>
+      <!--<h1 class="col-12 text-center d-block">Boost your links today</h1>
+      <h1 class="col-12 text-center d-block">Boost your links today</h1> -->
+    </div>       
+  </div>
+</div>
+<!-- Footer div ends -->
+
+
+
+
+
+
+
+<!-- Toast starts -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto message-header"></strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body"></div>
+          </div>
+        </div>
+<!-- Toast ends -->
+
+
+<script src="js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
