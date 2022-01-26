@@ -1,31 +1,53 @@
 'use strict';
 
+
+
+window.initalFunction = function(urlValue){
+    //console.log(urlValue);
+if(urlValue!="" && urlValue!="empty") {
+$("#copy_button").removeClass("d-none");
+document.querySelector('.action-button').innerHTML = "Clear";
+}
+else if(urlValue=="empty"){
+document.querySelector('.action-button').innerHTML = "Shorten It!";
+$("#copy_button").addClass("d-none");
+}
+
+else{
+    $("#copy_button").addClass("d-none");
+    document.querySelector('.action-button').innerHTML = "Shorten It!";
+}
+
+}
+
+
+
+
 window.getURL = function() {
-    var enteredURL = document.querySelector('.source-url').value;
+  
     let searchParams = ['.com', '.org', 'co.in', '.in', '.me', '.biz'];
     //  let searchParams = '.com';
     //  console.log(enteredURL)
     var checkParam;
-
-
+let actionButtonValue = document.querySelector('.action-button').innerHTML;
+var enteredURL = document.querySelector('.source-url').value;
+if(actionButtonValue!="Clear")
+    {           
+ 
     if (enteredURL) {
-        // console.log("dfh")
-        // let eURL = ``;
-        // let shorCodeString = 'shrt';
-
         $.getJSON(`https://api.shrtco.de/v2/shorten?url=${enteredURL}`, function(data) {
-            // console.log(data);
+
             $.each(data, function(key, value) {
                 let urlApiValue = value.short_link;
                 document.querySelector('.source-url').value = value.short_link;
                 let shortenedInputValue = document.querySelector('.source-url').value;
-
                 if (urlApiValue == shortenedInputValue) {
                     $("#copy_button").removeClass("d-none");
                     // $("#shorten-url").addClass("d-none");
                     window.WriteCookie(shortenedInputValue);
                     // window.copyUrlToClip();
                 }
+              
                 // else{
 
                 // if(enteredURL)
@@ -38,27 +60,37 @@ window.getURL = function() {
                 // console.log(value)
             });
         });
-
+        
         // window.WriteCookie(enteredURL);
     } else {
-
         var toastLiveExample = document.getElementById('liveToast');
         document.querySelector('.toast-body').innerHTML = "Please enter correct URL to be shortened.";
         document.querySelector('.message-header').innerHTML = "Incorrect";
         var toast = new bootstrap.Toast(toastLiveExample)
         toast.show()
     }
+}
+
+else  {
+window.destroyCookie();
+}
 
 }
 
 window.WriteCookie = function(url) {
     // alert("Copied the text: " );
-    let cookievalue = escape(url) + ";"
-    document.cookie = "name=" + cookievalue;
-    //  alert(document.cookie);
+    let cookievalue = url;
+    document.cookie = "Shortened=" + cookievalue ;
+    window.initalFunction(cookievalue);
+};
 
-    //    console.log("WC")
-}
+window.destroyCookie = function() {
+   let getCookie = window.ReadCookie();
+   getCookie = "Shortened="+"";
+   document.cookie = getCookie;
+   document.querySelector(".source-url").value = "";
+   window.initalFunction("empty");
+};
 
 window.copyUrlToClip = function() {
     var copyText = document.querySelector(".source-url");
@@ -152,9 +184,15 @@ window.ReadCookie = function() {
             let name = cookiearray[i].split('=')[0];
             let value = cookiearray[i].split('=')[1];
             document.querySelector('.source-url').value = value;
+            window.initalFunction(value);
+            // return value;
             // console.log("Key is: " + name + " and Value is : " + value);
         }
     }
     //  else alert("No cookie available");
-    else console.log("No cookie available");
+    else
+    { 
+    console.log("No cookie available");
+    window.initalFunction("empty");
+    }
 }
